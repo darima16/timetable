@@ -3,7 +3,7 @@ import json
 n = input('Для просмотра расписания гр. 18704 введите 1: ')
 if n == '1':
     lst = []
-    with open('расписание1.txt') as f:
+    with open('time.txt', encoding='utf-8') as f:
         for line in f.readlines():
             a = Day(json.loads(line))
             lst.append(str(a).split(', '))
